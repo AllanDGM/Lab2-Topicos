@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4AC82632-5608-4F8B-9831-3EA81030B54A}</ProjectGuid>
+    <ProjectGuid>{CC2B405E-D150-4D59-9923-E029F7D552A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WcfLabTop</RootNamespace>
-    <AssemblyName>WcfLabTop</AssemblyName>
+    <RootNamespace>WcfLab2Topicos</RootNamespace>
+    <AssemblyName>WcfLab2Topicos</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -45,6 +45,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteService.cs" />
+    <Compile Include="IClienteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
