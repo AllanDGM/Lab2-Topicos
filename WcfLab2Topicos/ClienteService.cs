@@ -14,12 +14,12 @@ namespace WcfServices
     {
         private static List<Cliente> listaClientes = new List<Cliente>();
 
-        public List<Cliente> ObtenerClientesNombreCliente()
+        public List<Cliente> ObtenerClientesNombreCliente(string nombre)
         {
             return listaClientes;
         }
 
-        public List<Cliente> ObtenerClientesNombrePais()
+        public List<Cliente> ObtenerClientesNombrePais(string pais)
         {
             return listaClientes;
         }
