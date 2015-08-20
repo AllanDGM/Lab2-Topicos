@@ -17,6 +17,9 @@ namespace WcfLab2Topicos
         public string Nombre;
 
         [DataMember]
-        public DateTime FechaNacimiento;
+        public string Apellido;
+
+        [DataMember]
+        public string Pais;
     }
 }

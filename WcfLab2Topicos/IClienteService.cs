@@ -12,15 +12,10 @@ namespace WcfServices
     public interface IClienteService
     {
         [OperationContract]
-        List<Cliente> ObtenerClientes();
+        List<Cliente> ObtenerClientesNombreCliente(String nombre);
+
 
         [OperationContract]
-        void InsertarCliente(Cliente c);
-
-        [OperationContract]
-        void ModificarCliente(Cliente c);
-
-        [OperationContract]
-        void EliminarCliente(int id);
+        List<Cliente> ObtenerClientesNombrePais(String pais);
     }
 }
