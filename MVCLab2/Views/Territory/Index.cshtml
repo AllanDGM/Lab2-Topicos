@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+        
+    <h3>Lista Territorios</h3>
+    @using (Html.BeginForm("search", "CustomerTerritory"))
+    {
+        <input type="text" name="keyword"  /> <input type="submit" value="Search" />
+        <br />
+        <input type="radio" name="condition" value="byID" checked="checked" /> <span>NombreCliente</span>
+        <input type="radio" name="condition" value="byDate" />  <span>NombreTerritorio</span>
+    }
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>PersonID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Territorio</th>
+        </tr>
+        @foreach (var CustomerTerritory in ViewBag.listCustomerTerritory) 
+        { 
+            <tr>
+                <td>@CustomerTerritory.PersonID</td>
+                <td>@CustomerTerritory.Nombre</td>
+                <td>@CustomerTerritory.Apellido</td>
+                <td>@CustomerTerritory.Territorio</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
