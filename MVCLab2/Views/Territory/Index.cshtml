@@ -12,10 +12,13 @@
 <body>
         
     <h3>Lista Territorios</h3>
-    @using (Html.BeginForm("Search", "CustomerTerritory"))
-    {
-        <input type="text" name="keyword"  /> <input type="submit" value="Search" />
-    }
+@using (Html.BeginForm("search", "CustomerTerritory"))
+{
+    <input type="text" name="keyword" /> <input type="submit" value="Search" />
+    <br />
+    <input type="radio" name="condition" value="byID" checked="checked" /> <span>NombreCliente</span>
+    <input type="radio" name="condition" value="byDate" />  <span>NombreTerritorio</span>
+}
     <table cellpadding="2" cellspacing="2" border="1">
         <tr>
             <th>PersonID</th>

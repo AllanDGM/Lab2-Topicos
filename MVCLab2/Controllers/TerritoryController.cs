@@ -21,12 +21,12 @@ namespace MVCLab2.Controllers
 
         public ActionResult Search(FormCollection fc)
         {
-            //string condition = fc["condition"];
+            string condition = fc["condition"];
             string keyword = fc["keyword"];
-            //if (condition.Equals("byID"))
+            if (condition.Equals("byID"))
                 ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombreCliente(keyword);
-            //else
-                //ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombrePais(keyword);
+            else
+                ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombrePais(keyword);
 
             return View("Index");
         }
