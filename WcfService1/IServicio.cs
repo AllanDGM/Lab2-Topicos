@@ -20,4 +20,6 @@ namespace WcfService1
         [OperationContract]
         List<CustomerTerritory> ObtenerClientes();
     }
+
+    //PRUEBA
 }
