@@ -21,5 +21,5 @@ namespace WcfService1
         List<CustomerTerritory> ObtenerClientes();
     }
 
-    //PRUEBA 2
+    
 }
