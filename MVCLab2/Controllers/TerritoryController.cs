@@ -15,6 +15,7 @@ namespace MVCLab2.Controllers
         public ActionResult Index()
         {
             ViewBag.listCustomerTerritory = servicio.ObtenerClientes();
+           // ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombreCliente("Gustavo");
 
             return View();
         }
@@ -24,7 +25,7 @@ namespace MVCLab2.Controllers
             string condition = fc["condition"];
             string keyword = fc["keyword"];
             if (condition.Equals("byID"))
-                ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombreCliente(keyword);
+                ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombreCliente(Convert.ToString(keyword));
             else
                 ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombrePais(keyword);
 
