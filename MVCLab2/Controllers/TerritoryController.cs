@@ -27,7 +27,10 @@ namespace MVCLab2.Controllers
             if (condition.Equals("byID"))
                 ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombreCliente(Convert.ToString(keyword));
             else
-                ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombrePais(keyword);
+                if (condition.Equals("All"))
+                    ViewBag.listCustomerTerritory = servicio.ObtenerClientes();   
+                else
+                        ViewBag.listCustomerTerritory = servicio.ObtenerClientesNombrePais(keyword);
 
             return View("Index");
         }
